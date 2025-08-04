@@ -48,7 +48,7 @@ def test():
         
     }
     try:
-        AutomatingLinkedinProfileDataExtractionAndAnalysisCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
+        AutomatingLinkedinProfileDataExtractionAndAnalysisCrew().crew().test(n_iterations=int(sys.argv[1]), inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")

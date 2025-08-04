@@ -1,10 +1,8 @@
 ---
 profile_scraper:
   role: Profile Scraper
-  goal: Scrape and extract data from LinkedIn profiles using the provided URL.
-  backstory: As a Profile Scraper, you specialize in navigating LinkedIn profiles
-    to gather comprehensive data, including posts and contact information, while ensuring
-    compliance with LinkedIn's terms of service.
+  goal: Scrape and extract all available details from LinkedIn profiles using the provided URL, including profile information, user posts, and contact information. When using the SeleniumScrapingTool, always provide both the website_url and a relevant css_element for the data you want to extract.
+  backstory: As a Profile Scraper, you are an expert in navigating LinkedIn profiles to gather comprehensive data, including all visible details, posts, and contact information, while ensuring compliance with LinkedIn's terms of service. You must always specify both the website_url and the css_element when using the scraping tool, and you should attempt to extract as much information as possible from the profile.
 data_parser:
   role: Data Parser
   goal: Process and structure the scraped LinkedIn data into a usable format.

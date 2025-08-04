@@ -1,39 +1,33 @@
 ---
 access_linkedin_profile:
-  description: Use the provided LinkedIn Profile URL to navigate to the LinkedIn profile
-    page and prepare for data extraction.
-  expected_output: Successful navigation to the LinkedIn profile page.
+  description: "Use the provided LinkedIn Profile URL: {{linkedin_url}} to navigate to the LinkedIn profile page and prepare for data extraction."
+  expected_output: "Successful navigation to the LinkedIn profile page."
   async_execution: false
   agent: profile_scraper
 scrape_profile_information:
-  description: Extract basic information such as name, headline, and current position
-    from the LinkedIn profile.
-  expected_output: Basic profile information including name, headline, and current
-    position.
+  description: "Extract basic information such as name, headline, and current position from the LinkedIn profile at {{linkedin_url}}."
+  expected_output: "Basic profile information including name, headline, and current position."
   async_execution: false
   agent: profile_scraper
   context:
   - access_linkedin_profile
 scrape_posts:
-  description: Collect recent posts and their details from the LinkedIn profile.
-  expected_output: A list of recent posts with details such as date, content, and
-    engagement metrics.
+  description: "Collect recent posts and their details from the LinkedIn profile at {{linkedin_url}}."
+  expected_output: "A list of recent posts with details such as date, content, and engagement metrics."
   async_execution: false
   agent: profile_scraper
   context:
   - access_linkedin_profile
 scrape_contact_information:
-  description: Gather available contact details from the LinkedIn profile.
-  expected_output: Contact information such as email and phone number, if available.
+  description: "Gather available contact details from the LinkedIn profile at {{linkedin_url}}."
+  expected_output: "Contact information such as email and phone number, if available."
   async_execution: false
   agent: profile_scraper
   context:
   - access_linkedin_profile
 structure_data:
-  description: Organize the scraped data into a structured format like JSON or CSV
-    for further analysis.
-  expected_output: Structured data file containing profile information, posts, and
-    contact details.
+  description: "Organize the scraped data from {{linkedin_url}} into a structured format like JSON or CSV for further analysis."
+  expected_output: "Structured data file containing profile information, posts, and contact details."
   async_execution: false
   agent: data_parser
   context:
